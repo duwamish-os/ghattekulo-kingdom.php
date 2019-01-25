@@ -3,9 +3,9 @@
    // phpinfo();                                                                                        
                                                                                                        
    $counter = 1;                                                                                       
-   $name = "yo";                                                                                       
+   $name = "Architects";                                                                                       
                                                                                                        
-   echo "name: " . $name;                                                                              
-   echo "\n\n";                                                                                        
+   echo "name: " . $name;                                                                
+   echo "\n\n";                                                                                
    echo "counter: " . $counter;                                                                        
 ?>
