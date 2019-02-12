@@ -5,7 +5,9 @@ php served by httpd(rhel)= apache2(ubuntu)
 
 docker build -it metal-king .
 docker run -it metal-king
+```
 
+```bash
 $ docker exec -it bbb5a0bbdba9 bash
 
 [root@bbb5a0bbdba9 /]# php -version
