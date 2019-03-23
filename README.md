@@ -28,5 +28,9 @@ zip
 
 ```
 php -f zipme.php
+unzip data.zip
+
+php gunzipme.php
+gunzip data.gz 
 ```
 
