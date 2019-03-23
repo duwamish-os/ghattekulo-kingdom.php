@@ -23,6 +23,10 @@ total 4
 name: Architects
 ```
 
+zip
+---
 
-
+```
+php -f zipme.php
+```
 
