@@ -23,14 +23,34 @@ total 4
 name: Architects
 ```
 
-zip
+Compression using zip
 ---
+
+https://en.wikipedia.org/wiki/LZ77_and_LZ78
 
 ```
 php -f zipme.php
 unzip data.zip
 
 php gunzipme.php
+
+# CLI - GNUzip a file, note it replaces original file
+gzip music-data.csv
+gzip < music-data.csv > data.gz
+# GNU unzip
 gunzip data.gz 
+
+# GNUzipping multiple files
+# TapeAR(tar) puts the files together, while gzip then performs the compression.
+# tar was originally developed to write data to sequential I/O devices with no file system of their own
+tar cvf data.tar music-data.csv movie-data.csv
+
+#extract(x) from tape archive
+tar xvf data.tar 
+x music-data.csv
+x movie-data.csv
+
+#tape archive and then gunzip in a single command
+tar -zcvf data.tar.gz music-data.csv movie-data.csv
 ```
 
