@@ -28,7 +28,7 @@ Compression using zip
 
 https://en.wikipedia.org/wiki/LZ77_and_LZ78
 
-```
+```bash
 php -f zipme.php
 unzip data.zip
 
@@ -54,3 +54,9 @@ x movie-data.csv
 tar -zcvf data.tar.gz music-data.csv movie-data.csv
 ```
 
+
+```bash
+php tape_archive_me.php
+# creates archived_data.tar.gz
+
+```
