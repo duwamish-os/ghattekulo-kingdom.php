@@ -50,7 +50,7 @@ tar xvf data.tar
 x music-data.csv
 x movie-data.csv
 
-#tape archive and then gunzip in a single command
+#tape archive and then GNU zip in a single command
 tar -zcvf data.tar.gz music-data.csv movie-data.csv
 ```
 

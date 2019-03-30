@@ -1,15 +1,17 @@
 <?php
 
-try {
-    $archive = new PharData('archived_data.tar');
+$to_file = '/tmp/archived_data.tar';
 
-    $archive->addFile('music-data.csv');
-    $archive->addFile('movie-data.csv');
+try {
+    $archive = new PharData($to_file);
+
+    $archive->addFile('music-data.csv', 'music.csv');
+    $archive->addFile('movie-data.csv', 'movie.csv');
 
     $archive->compress(Phar::GZ);
 
     unset($archive);
-    unlink('archived_data.tar');
+    unlink($to_file);
 } catch (Exception $e) {
     echo "Exception : " . $e;
 }
