@@ -3,8 +3,8 @@ php served by httpd(rhel)= apache2(ubuntu)
 
 ```bash
 
-docker build -it metal-king .
-docker run -it metal-king
+docker build -t metal-king:1.0.0 .
+docker run -it metal-king:1.0.0
 ```
 
 ```bash
