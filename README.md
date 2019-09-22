@@ -4,7 +4,7 @@ php served by httpd(rhel)= apache2(ubuntu)
 ```bash
 
 docker build -t metal-king:1.0.0 .
-docker run -it metal-king:1.0.0
+docker run -p 8080:80 -it metal-king:1.0.0
 ```
 
 ```bash
@@ -59,4 +59,15 @@ tar -zcvf data.tar.gz music-data.csv movie-data.csv
 php tape_archive_me.php
 # creates archived_data.tar.gz
 
+```
+
+connecting to MySQL
+--------------------
+
+```bash
+## create tunnel from host machine
+ssh -i private.pem ec2-user@aws_public_ip -L 3336:rds.us-east-1.rds.amazonaws.com:3306 -N
+
+## connect from container
+mysql --host docker.for.mac.localhost --port 3336 -u admin --password
 ```

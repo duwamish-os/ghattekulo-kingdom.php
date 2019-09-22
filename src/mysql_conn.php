@@ -1,6 +1,6 @@
 <?php
 
-$dbhost="localhost";
+$dbhost="docker.for.mac.localhost:3336";
 $username="admin";
 $password="admin";
 
