@@ -22,6 +22,7 @@ RUN yum update -y && yum install -y \                                           
   aws configure set default.s3.signature_version s3v4 && \                                             
   yum -y install ssmtp
 
+COPY conf/vhosts.conf /etc/httpd/conf.d/
 COPY conf/php.ini /etc/php.ini
 COPY src/*.php /var/www/html/
 

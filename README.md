@@ -5,8 +5,7 @@ php served by httpd(rhel)= apache2(ubuntu)
 
 docker build -t metal-king:1.0.0 .
 
-## --net=host in order to use host SSH tunnel
-docker run --net=host  -it metal-king:1.0.0
+docker run -p8080:80 -it metal-king:1.0.0
 ```
 
 ```bash
